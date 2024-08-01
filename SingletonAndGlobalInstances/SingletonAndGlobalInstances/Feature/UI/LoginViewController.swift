@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class LoginViewController: UIViewController {
+    var api = ApiClient.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        api.login { user in
+            // show feed screen
+        }
     }
-
-
 }
 
