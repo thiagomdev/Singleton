@@ -16,6 +16,7 @@
 		AA2022EF2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2022EE2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.swift */; };
 		AA2022F92C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2022F82C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.swift */; };
 		AA2022FB2C5B87DB0029F577 /* SingletonAndGlobalInstancesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2022FA2C5B87DB0029F577 /* SingletonAndGlobalInstancesUITestsLaunchTests.swift */; };
+		AA2023082C5B89E70029F577 /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023072C5B89E20029F577 /* AppClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AA2022F42C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingletonAndGlobalInstancesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2022F82C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonAndGlobalInstancesUITests.swift; sourceTree = "<group>"; };
 		AA2022FA2C5B87DB0029F577 /* SingletonAndGlobalInstancesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonAndGlobalInstancesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA2023072C5B89E20029F577 /* AppClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		AA2022D62C5B87D90029F577 /* SingletonAndGlobalInstances */ = {
 			isa = PBXGroup;
 			children = (
+				AA2023072C5B89E20029F577 /* AppClient.swift */,
 				AA2022D72C5B87D90029F577 /* AppDelegate.swift */,
 				AA2022D92C5B87D90029F577 /* SceneDelegate.swift */,
 				AA2022DB2C5B87D90029F577 /* ViewController.swift */,
@@ -260,6 +263,7 @@
 			files = (
 				AA2022DC2C5B87D90029F577 /* ViewController.swift in Sources */,
 				AA2022D82C5B87D90029F577 /* AppDelegate.swift in Sources */,
+				AA2023082C5B89E70029F577 /* AppClient.swift in Sources */,
 				AA2022DA2C5B87D90029F577 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
