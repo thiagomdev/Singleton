@@ -16,7 +16,7 @@
 ///      private init() {}
 ///  }
 ///  ```
-/// Verify that you don't using the key word final before the key word class. Because the final word won't allow you inherit the Singleton to do a Unit Test for exemplo.
+/// Verify that you are not using the key word final before the key word class. Because the final word won't allow you inherit the Singleton to do a Unit Test for exemplo.
 ///
 /// ```swift
 /// final class ApiClient {}
