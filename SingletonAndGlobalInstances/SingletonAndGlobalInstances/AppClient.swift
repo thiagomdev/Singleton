@@ -16,8 +16,6 @@
 ///      private init() {}
 ///  }
 ///  ```
-///
-///  
 class AppClient {
     static let shared: AppClient = .init()
     
