@@ -5,7 +5,7 @@ protocol LoginClientProtocol: AnyObject {
 }
 
 final class LoginViewController: UIViewController {
-    var adapter = LoginClientAdapter(api: .init())
+    var adapter = LoginClientAdapter(api: .shared)
     
     override func viewDidLoad() {
         super.viewDidLoad()
