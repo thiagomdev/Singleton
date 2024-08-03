@@ -33,5 +33,6 @@ class ApiClient {
     
     func execute(request : URLRequest, completion: (Data) -> Void) {
         // implementation
+        completion(.init())
     }
 }
