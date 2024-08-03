@@ -13,7 +13,6 @@
 		AA2022DF2C5B87D90029F577 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AA2022DE2C5B87D90029F577 /* Base */; };
 		AA2022E12C5B87DA0029F577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2022E02C5B87DA0029F577 /* Assets.xcassets */; };
 		AA2022E42C5B87DA0029F577 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AA2022E32C5B87DA0029F577 /* Base */; };
-		AA2022EF2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2022EE2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.swift */; };
 		AA2022F92C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2022F82C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.swift */; };
 		AA2022FB2C5B87DB0029F577 /* SingletonAndGlobalInstancesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2022FA2C5B87DB0029F577 /* SingletonAndGlobalInstancesUITestsLaunchTests.swift */; };
 		AA2023082C5B89E70029F577 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023072C5B89E20029F577 /* ApiClient.swift */; };
@@ -25,6 +24,7 @@
 		AA20231B2C5DD1410029F577 /* LoginClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231A2C5DD13F0029F577 /* LoginClientAdapter.swift */; };
 		AA20231D2C5DD16D0029F577 /* FeedClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231C2C5DD16C0029F577 /* FeedClientAdapter.swift */; };
 		AA20231F2C5DD1940029F577 /* FollowerClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */; };
+		AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		AA2022E32C5B87DA0029F577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA2022E52C5B87DA0029F577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA2022EA2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingletonAndGlobalInstancesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA2022EE2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonAndGlobalInstancesTests.swift; sourceTree = "<group>"; };
 		AA2022F42C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingletonAndGlobalInstancesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2022F82C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonAndGlobalInstancesUITests.swift; sourceTree = "<group>"; };
 		AA2022FA2C5B87DB0029F577 /* SingletonAndGlobalInstancesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonAndGlobalInstancesUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		AA20231A2C5DD13F0029F577 /* LoginClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapter.swift; sourceTree = "<group>"; };
 		AA20231C2C5DD16C0029F577 /* FeedClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapter.swift; sourceTree = "<group>"; };
 		AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapter.swift; sourceTree = "<group>"; };
+		AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AA2022D62C5B87D90029F577 /* SingletonAndGlobalInstances */,
-				AA2022ED2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests */,
+				AA20232E2C5DD4100029F577 /* SingletonAndGlobalInstancesTests */,
 				AA2022F72C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests */,
 				AA2022D52C5B87D90029F577 /* Products */,
 			);
@@ -122,14 +122,6 @@
 				AA20230D2C5B95A10029F577 /* Resources */,
 			);
 			path = SingletonAndGlobalInstances;
-			sourceTree = "<group>";
-		};
-		AA2022ED2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests */ = {
-			isa = PBXGroup;
-			children = (
-				AA2022EE2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.swift */,
-			);
-			path = SingletonAndGlobalInstancesTests;
 			sourceTree = "<group>";
 		};
 		AA2022F72C5B87DB0029F577 /* SingletonAndGlobalInstancesUITests */ = {
@@ -290,6 +282,30 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		AA20232E2C5DD4100029F577 /* SingletonAndGlobalInstancesTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA20232F2C5DD4190029F577 /* Scenes */,
+			);
+			path = SingletonAndGlobalInstancesTests;
+			sourceTree = "<group>";
+		};
+		AA20232F2C5DD4190029F577 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023302C5DD4210029F577 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA2023302C5DD4210029F577 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -361,6 +377,7 @@
 					};
 					AA2022E92C5B87DB0029F577 = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 						TestTargetID = AA2022D32C5B87D90029F577;
 					};
 					AA2022F32C5B87DB0029F577 = {
@@ -440,7 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA2022EF2C5B87DB0029F577 /* SingletonAndGlobalInstancesTests.swift in Sources */,
+				AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L923PSABUA;
@@ -676,6 +694,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thiagomonteiro.SingletonAndGlobalInstancesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingletonAndGlobalInstances.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SingletonAndGlobalInstances";
@@ -686,6 +705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L923PSABUA;

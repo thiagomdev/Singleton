@@ -8,13 +8,18 @@
 import Foundation
 
 final class LoginClientAdapter {
-    private let api: ApiClient = .shared
+    private let api: ApiClient
+    
+    init(api: ApiClient) {
+        self.api = api
+    }
 }
 
 extension LoginClientAdapter: LoginClientProtocol {
     func login(completion: (LoggedInUser) -> Void) {
-        api.execute(URLRequest(url: URL(string: "https://")!)) { loggedInUser in
+        api.execute(request: URLRequest(url: URL(string: "https://")!)) { _ in
             // call the completion
+            completion(.init())
         }
     }
 }

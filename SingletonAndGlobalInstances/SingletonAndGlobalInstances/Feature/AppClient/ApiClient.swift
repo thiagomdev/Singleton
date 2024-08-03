@@ -29,12 +29,10 @@ import Foundation
 /// ```
 
 class ApiClient {
-    static let shared: ApiClient = .init()
-    private var loginAdapter: LoginClientAdapter?
+    static let shared: ApiClient = .init()    
+//    private init() {}
     
-    private init() {}
-    
-    func execute(_ : URLRequest, completion: (Data) -> Void) {
+    func execute(request : URLRequest, completion: (Data) -> Void) {
         // implementation
     }
 }

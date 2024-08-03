@@ -13,7 +13,7 @@ final class FeedClientAdapter {
 
 extension FeedClientAdapter: FeedClientProtocol {
     func loadFeed(completion: ([FeedItem]) -> Void) {
-        api.execute(URLRequest(url: URL(string: "https://")!)) { feedItems in
+        api.execute(request: URLRequest(url: URL(string: "https://")!)) { feedItems in
             // call the completion for example
         }
     }
