@@ -8,13 +8,18 @@
 import Foundation
 
 final class FeedClientAdapter {
-    private let api = ApiClient.shared
+    private let api: ApiClient
+    
+    init(api: ApiClient) {
+        self.api = api
+    }
 }
 
 extension FeedClientAdapter: FeedClientProtocol {
     func loadFeed(completion: ([FeedItem]) -> Void) {
-        api.execute(request: URLRequest(url: URL(string: "https://")!)) { feedItems in
-            // call the completion for example
+        api.execute(request: URLRequest(url: URL(string: "https://")!)) { _ in
+            // call the completion
+            completion(.init())
         }
     }
 }

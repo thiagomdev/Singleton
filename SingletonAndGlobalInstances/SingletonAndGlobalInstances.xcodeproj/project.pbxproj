@@ -27,6 +27,7 @@
 		AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */; };
 		AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */; };
 		AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023352C5DDDA80029F577 /* Sut.swift */; };
+		AA20233B2C5DE2D00029F577 /* FeedClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterTests.swift; sourceTree = "<group>"; };
 		AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterSpy.swift; sourceTree = "<group>"; };
 		AA2023352C5DDDA80029F577 /* Sut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sut.swift; sourceTree = "<group>"; };
+		AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				AA2023302C5DD4210029F577 /* Login */,
+				AA2023372C5DE2930029F577 /* Feed */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -305,11 +308,35 @@
 		AA2023302C5DD4210029F577 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				AA2023382C5DE2A40029F577 /* Adapter */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AA2023372C5DE2930029F577 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023392C5DE2B50029F577 /* Adapter */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		AA2023382C5DE2A40029F577 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
 				AA2023352C5DDDA80029F577 /* Sut.swift */,
 				AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */,
 				AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */,
 			);
-			path = Login;
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		AA2023392C5DE2B50029F577 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +492,7 @@
 			files = (
 				AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */,
 				AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */,
+				AA20233B2C5DE2D00029F577 /* FeedClientAdapterTests.swift in Sources */,
 				AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
