@@ -10,8 +10,8 @@ final class LoginClientAdapter {
 
 extension LoginClientAdapter: LoginClientProtocol {
     func login(completion: (LoggedInUser) -> Void) {
-        api.execute(request: URLRequest(url: URL(string: "https://")!)) { _ in
-            completion(.init())
+        api.login { user in
+            completion(user)
         }
     }
 }

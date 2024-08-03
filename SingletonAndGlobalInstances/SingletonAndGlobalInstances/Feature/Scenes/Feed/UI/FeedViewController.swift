@@ -5,18 +5,27 @@ protocol FeedClientProtocol {
 }
 
 final class FeedViewController: UIViewController {
-    var adapter = FeedClientAdapter(api: .shared)
+    private let feedClient: FeedClientProtocol
     
+    init(feedClient: FeedClientProtocol) {
+        self.feedClient = feedClient
+        super.init(nibName: nil, bundle: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         showFeed()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
 extension FeedViewController {
     private func showFeed() {
-        adapter.loadFeed { feedItem in
-            // final result here
+        feedClient.loadFeed { feed in
+            // update feed
         }
     }
 }

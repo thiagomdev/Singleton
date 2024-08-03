@@ -2,16 +2,16 @@ import XCTest
 @testable import SingletonAndGlobalInstances
 
 final class FeedClientAdapterSpy: ApiClient {
-    var urlRequest: URL?
-    var expected: (Data)?
+    var expectedLoadFeed: ([FeedItem])?
     
-    private(set) var executeCalled: Bool = false
+    private(set) var loadFeedCalled: Bool = false
+    private(set) var loadFeedCount: Int = 0
     
-    override func execute(request: URLRequest, completion: (Data) -> Void) {
-        executeCalled = true
-        urlRequest = request.url
-        if let expected {
-            completion(expected)
+    override func loadFeed(completion: ([FeedItem]) -> Void) {
+        loadFeedCalled = true
+        loadFeedCount += 1
+        if let expectedLoadFeed {
+            completion(expectedLoadFeed)
         }
     }
 }

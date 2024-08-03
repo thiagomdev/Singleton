@@ -4,27 +4,37 @@ import XCTest
 final class LoginClientAdapterTests: XCTestCase {
     func test_login() {
         let (sut, adapterSpy) = makeSut()
-        let expectation = expectation(description: "Wait for a completion block!")
-        var expectedDataObject: LoggedInUser?
+        let exp = expectation(description: "Wait for a completion block!")
         
-        adapterSpy.urlRequest = .init(string: "https://")
-        adapterSpy.expected = .init()
+        var expectedDataObject: LoggedInUser?
+        adapterSpy.loggedInUser = .init()
         
         sut.login { user in
             expectedDataObject = user
-            expectation.fulfill()
+            exp.fulfill()
         }
-        wait(for: [expectation], timeout: 1.0)
         
-        XCTAssertTrue(adapterSpy.executeCalled)
+        wait(for: [exp], timeout: 5.0)
+        
+        XCTAssertTrue(adapterSpy.loggedInUserCalled)
+        XCTAssertEqual(adapterSpy.loggedInUserCount, 1)
         XCTAssertNotNil(expectedDataObject)
     }
 }
 
 extension LoginClientAdapterTests {
-    private func makeSut() -> (sut: LoginClientAdapter, adapterSpy: LoginClientAdapterSpy) {
+    private func makeSut(
+        file: StaticString = #file,
+        line: UInt = #line) -> (
+            sut: LoginClientAdapter,
+            adapterSpy: LoginClientAdapterSpy) {
+                
         let adapterSpy = LoginClientAdapterSpy()
         let sut = LoginClientAdapter(api: adapterSpy)
+                
+        trackForMemoryLeaks(for: sut, file: file, line: line)
+        trackForMemoryLeaks(for: adapterSpy, file: file, line: line)
+                
         return (sut, adapterSpy)
     }
 }
