@@ -7,20 +7,18 @@
 
 import UIKit
 
-class FollowerViewController: UIViewController {
-    var api = ApiClient.shared
+protocol FollowerClient {
+    func loadFollower(completion: ([Follower]) -> Void)
+}
+
+final class FollowerViewController: UIViewController {    
+    var adapter = FollowerClientAdapter(api: .shared)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        api.loadFollower { followers in
+        adapter.loadFollower { followers in
             // update followers
         }
-    }
-}
-
-extension ApiClient {
-    func loadFollower(completion: ([Follower]) -> Void) {
-        
     }
 }
