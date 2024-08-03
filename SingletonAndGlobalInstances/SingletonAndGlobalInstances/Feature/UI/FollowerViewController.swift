@@ -13,8 +13,14 @@ class FollowerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        api.loadFollower { follwers in
-            // gets the followers
+        api.loadFollower { followers in
+            // update followers
         }
+    }
+}
+
+extension ApiClient {
+    func loadFollower(completion: ([Follower]) -> Void) {
+        
     }
 }
