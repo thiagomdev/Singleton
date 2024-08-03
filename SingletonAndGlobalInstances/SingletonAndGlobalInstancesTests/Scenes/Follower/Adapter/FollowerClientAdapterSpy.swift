@@ -2,16 +2,15 @@ import XCTest
 @testable import SingletonAndGlobalInstances
 
 final class FollowerClientAdapterSpy: ApiClient {
-    var urlRequest: URL?
-    var expected: (Data)?
+    var expectedLoadFollowers: ([Follower])?
+    private(set) var loadFollowersCalled: Bool = false
+    private(set) var loadFollowersCount: Int = 0
     
-    private(set) var executeCalled: Bool = false
-    
-    override func execute(request: URLRequest, completion: (Data) -> Void) {
-        executeCalled = true
-        urlRequest = request.url
-        if let expected {
-            completion(expected)
+    override func loadFollowers(completion: ([Follower]) -> Void) {
+        loadFollowersCalled = true
+        loadFollowersCount += 1
+        if let expectedLoadFollowers {
+            completion(expectedLoadFollowers)
         }
     }
 }

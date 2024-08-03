@@ -7,16 +7,17 @@ final class FollowerClientAdapterTests: XCTestCase {
         let expectation = expectation(description: "Wait for a completion block!")
         var expectedDataObject: [Follower]?
         
-        adapterSpy.urlRequest = .init(string: "https://")
-        adapterSpy.expected = .init()
+        adapterSpy.expectedLoadFollowers = [.init()]
         
         sut.loadFollower { followers in
             expectedDataObject = followers
             expectation.fulfill()
         }
+        
         wait(for: [expectation], timeout: 1.0)
         
-        XCTAssertTrue(adapterSpy.executeCalled)
+        XCTAssertTrue(adapterSpy.loadFollowersCalled)
+        XCTAssertEqual(adapterSpy.loadFollowersCount, 1)
         XCTAssertNotNil(expectedDataObject)
     }
 }

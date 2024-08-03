@@ -5,18 +5,27 @@ protocol LoginClientProtocol: AnyObject {
 }
 
 final class LoginViewController: UIViewController {
-    var adapter = LoginClientAdapter(api: .shared)
+    private let loginClient: LoginClientProtocol
     
+    init(loginClient: LoginClientProtocol) {
+        self.loginClient = loginClient
+        super.init(nibName: nil, bundle: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         showLogin()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
 extension LoginViewController {
     private func showLogin() {
-        adapter.login { user in
-            // update users
+        loginClient.login { user in
+            // update user
         }
     }
 }

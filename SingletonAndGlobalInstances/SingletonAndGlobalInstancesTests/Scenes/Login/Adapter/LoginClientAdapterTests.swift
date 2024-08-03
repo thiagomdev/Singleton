@@ -4,19 +4,18 @@ import XCTest
 final class LoginClientAdapterTests: XCTestCase {
     func test_login() {
         let (sut, adapterSpy) = makeSut()
-        let expectation = expectation(description: "Wait for a completion block!")
+        let exp = expectation(description: "Wait for a completion block!")
         var expectedDataObject: LoggedInUser?
-        
-        adapterSpy.urlRequest = .init(string: "https://")
-        adapterSpy.expected = .init()
+        adapterSpy.loggedInUser = .init()
         
         sut.login { user in
             expectedDataObject = user
-            expectation.fulfill()
+            exp.fulfill()
         }
-        wait(for: [expectation], timeout: 1.0)
         
-        XCTAssertTrue(adapterSpy.executeCalled)
+        wait(for: [exp], timeout: 5.0)
+        XCTAssertTrue(adapterSpy.loggedInUserCalled)
+        XCTAssertEqual(adapterSpy.loggedInUserCount, 1)
         XCTAssertNotNil(expectedDataObject)
     }
 }

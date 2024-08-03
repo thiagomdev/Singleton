@@ -23,10 +23,27 @@ import Foundation
 /// ```
 
 class ApiClient {
-    static let shared: ApiClient = .init()    
+    var loginAdapter: LoginClientAdapter?
+    var feedAdapter: FeedClientAdapter?
+    var followerAdapter: FollowerClientAdapter?
+
+    init() { }
     
-    func execute(request : URLRequest, completion: (Data) -> Void) {
-        // implementation
-        completion(.init())
+    func login(completion: (LoggedInUser) -> Void) {
+        loginAdapter?.login { user in
+            completion(user)
+        }
+    }
+    
+    func loadFeed(completion: ([FeedItem]) -> Void) {
+        feedAdapter?.loadFeed { feed in
+            completion(feed)
+        }
+    }
+    
+    func loadFollowers(completion: ([Follower]) -> Void) {
+        followerAdapter?.loadFollower { followers in
+            completion(followers)
+        }
     }
 }

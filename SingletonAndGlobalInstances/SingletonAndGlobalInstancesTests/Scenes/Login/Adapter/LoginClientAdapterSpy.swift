@@ -2,16 +2,16 @@ import XCTest
 @testable import SingletonAndGlobalInstances
 
 final class LoginClientAdapterSpy: ApiClient {
-    var urlRequest: URL?
-    var expected: (Data)?
+    var loggedInUser: (LoggedInUser)?
     
-    private(set) var executeCalled: Bool = false
+    private(set) var loggedInUserCalled: Bool = false
+    private(set) var loggedInUserCount: Int = 0
     
-    override func execute(request: URLRequest, completion: (Data) -> Void) {
-        executeCalled = true
-        urlRequest = request.url
-        if let expected {
-            completion(expected)
+    override func login(completion: (LoggedInUser) -> Void) {
+        loggedInUserCalled = true
+        loggedInUserCount += 1
+        if let loggedInUser {
+            completion(loggedInUser)
         }
     }
 }

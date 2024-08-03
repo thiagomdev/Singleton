@@ -6,17 +6,16 @@ final class FeedClientAdapterTests: XCTestCase {
         let (sut, adapterSpy) = makeSut()
         let expectation = expectation(description: "Wait for a completion block!")
         var expectedDataObject: [FeedItem]?
-        
-        adapterSpy.urlRequest = .init(string: "https://")
-        adapterSpy.expected = .init()
+        adapterSpy.expectedLoadFeed = [.init()]
         
         sut.loadFeed { feed in
             expectedDataObject = feed
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: 5.0)
         
-        XCTAssertTrue(adapterSpy.executeCalled)
+        XCTAssertTrue(adapterSpy.loadFeedCalled)
+        XCTAssertEqual(adapterSpy.loadFeedCount, 1)
         XCTAssertNotNil(expectedDataObject)
     }
 }

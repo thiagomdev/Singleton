@@ -10,8 +10,8 @@ final class FeedClientAdapter {
 
 extension FeedClientAdapter: FeedClientProtocol {
     func loadFeed(completion: ([FeedItem]) -> Void) {
-        api.execute(request: URLRequest(url: URL(string: "https://")!)) { _ in
-            completion([.init()])
+        api.loadFeed { feed in
+            completion(feed)
         }
     }
 }
