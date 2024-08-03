@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  SingletonAndGlobalInstances
-//
-//  Created by Thiago Monteiro on 01/08/24.
-//
-
 import UIKit
 
 protocol LoginClientProtocol: AnyObject {
@@ -12,7 +5,7 @@ protocol LoginClientProtocol: AnyObject {
 }
 
 final class LoginViewController: UIViewController {
-    var adapter = LoginClientAdapter(api: .shared)
+    var adapter = LoginClientAdapter(api: .init())
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,10 +1,3 @@
-//
-//  FollowerViewController.swift
-//  SingletonAndGlobalInstances
-//
-//  Created by Thiago Monteiro on 01/08/24.
-//
-
 import UIKit
 
 protocol FollowerClient {
@@ -16,7 +9,12 @@ final class FollowerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        didLoadFollowers()
+    }
+}
+
+extension FollowerViewController {
+    private func didLoadFollowers() {
         adapter.loadFollower { followers in
             // update followers
         }

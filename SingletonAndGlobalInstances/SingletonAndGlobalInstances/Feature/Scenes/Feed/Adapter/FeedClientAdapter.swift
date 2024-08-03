@@ -1,10 +1,3 @@
-//
-//  FeedClientAdapter.swift
-//  SingletonAndGlobalInstances
-//
-//  Created by Thiago Monteiro on 02/08/24.
-//
-
 import Foundation
 
 final class FeedClientAdapter {
