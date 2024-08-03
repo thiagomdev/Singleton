@@ -25,6 +25,8 @@
 		AA20231D2C5DD16D0029F577 /* FeedClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231C2C5DD16C0029F577 /* FeedClientAdapter.swift */; };
 		AA20231F2C5DD1940029F577 /* FollowerClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */; };
 		AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */; };
+		AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */; };
+		AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023352C5DDDA80029F577 /* Sut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		AA20231C2C5DD16C0029F577 /* FeedClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapter.swift; sourceTree = "<group>"; };
 		AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapter.swift; sourceTree = "<group>"; };
 		AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterTests.swift; sourceTree = "<group>"; };
+		AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterSpy.swift; sourceTree = "<group>"; };
+		AA2023352C5DDDA80029F577 /* Sut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +305,8 @@
 		AA2023302C5DD4210029F577 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				AA2023352C5DDDA80029F577 /* Sut.swift */,
+				AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */,
 				AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */,
 			);
 			path = Login;
@@ -458,6 +464,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */,
+				AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */,
+				AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

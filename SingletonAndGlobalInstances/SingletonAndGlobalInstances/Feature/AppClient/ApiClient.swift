@@ -30,7 +30,6 @@ import Foundation
 
 class ApiClient {
     static let shared: ApiClient = .init()    
-//    private init() {}
     
     func execute(request : URLRequest, completion: (Data) -> Void) {
         // implementation
