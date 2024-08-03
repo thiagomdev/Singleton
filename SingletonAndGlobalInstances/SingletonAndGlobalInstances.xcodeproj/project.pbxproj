@@ -28,6 +28,7 @@
 		AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */; };
 		AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023352C5DDDA80029F577 /* Sut.swift */; };
 		AA20233B2C5DE2D00029F577 /* FeedClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */; };
+		AA20233E2C5DE73C0029F577 /* FollowerClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20233D2C5DE73C0029F577 /* FollowerClientAdapterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterSpy.swift; sourceTree = "<group>"; };
 		AA2023352C5DDDA80029F577 /* Sut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sut.swift; sourceTree = "<group>"; };
 		AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapterTests.swift; sourceTree = "<group>"; };
+		AA20233D2C5DE73C0029F577 /* FollowerClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 			children = (
 				AA2023302C5DD4210029F577 /* Login */,
 				AA2023372C5DE2930029F577 /* Feed */,
+				AA20233C2C5DE6F20029F577 /* Follower */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -335,6 +338,22 @@
 			isa = PBXGroup;
 			children = (
 				AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		AA20233C2C5DE6F20029F577 /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				AA20233F2C5DE7550029F577 /* Adapter */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
+		AA20233F2C5DE7550029F577 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				AA20233D2C5DE73C0029F577 /* FollowerClientAdapterTests.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -491,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */,
+				AA20233E2C5DE73C0029F577 /* FollowerClientAdapterTests.swift in Sources */,
 				AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */,
 				AA20233B2C5DE2D00029F577 /* FeedClientAdapterTests.swift in Sources */,
 				AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */,

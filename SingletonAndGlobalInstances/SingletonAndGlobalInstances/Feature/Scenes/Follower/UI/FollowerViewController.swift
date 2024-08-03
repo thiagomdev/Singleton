@@ -12,7 +12,7 @@ protocol FollowerClient {
 }
 
 final class FollowerViewController: UIViewController {    
-    var adapter = FollowerClientAdapter()
+    var adapter = FollowerClientAdapter(api: .shared)
     
     override func viewDidLoad() {
         super.viewDidLoad()
