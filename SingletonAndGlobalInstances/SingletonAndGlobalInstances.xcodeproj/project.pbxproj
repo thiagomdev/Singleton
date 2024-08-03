@@ -26,9 +26,10 @@
 		AA20231F2C5DD1940029F577 /* FollowerClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */; };
 		AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */; };
 		AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */; };
-		AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023352C5DDDA80029F577 /* Sut.swift */; };
 		AA20233B2C5DE2D00029F577 /* FeedClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */; };
 		AA20233E2C5DE73C0029F577 /* FollowerClientAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20233D2C5DE73C0029F577 /* FollowerClientAdapterTests.swift */; };
+		AA2023412C5E87B00029F577 /* FeedClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023402C5E87AF0029F577 /* FeedClientAdapterSpy.swift */; };
+		AA2023432C5E87EA0029F577 /* FollowerClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023422C5E87E90029F577 /* FollowerClientAdapterSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +73,10 @@
 		AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapter.swift; sourceTree = "<group>"; };
 		AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterTests.swift; sourceTree = "<group>"; };
 		AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapterSpy.swift; sourceTree = "<group>"; };
-		AA2023352C5DDDA80029F577 /* Sut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sut.swift; sourceTree = "<group>"; };
 		AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapterTests.swift; sourceTree = "<group>"; };
 		AA20233D2C5DE73C0029F577 /* FollowerClientAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapterTests.swift; sourceTree = "<group>"; };
+		AA2023402C5E87AF0029F577 /* FeedClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapterSpy.swift; sourceTree = "<group>"; };
+		AA2023422C5E87E90029F577 /* FollowerClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapterSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +329,6 @@
 		AA2023382C5DE2A40029F577 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				AA2023352C5DDDA80029F577 /* Sut.swift */,
 				AA2023332C5DDD830029F577 /* LoginClientAdapterSpy.swift */,
 				AA2023312C5DD4530029F577 /* LoginClientAdapterTests.swift */,
 			);
@@ -337,6 +338,7 @@
 		AA2023392C5DE2B50029F577 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				AA2023402C5E87AF0029F577 /* FeedClientAdapterSpy.swift */,
 				AA20233A2C5DE2D00029F577 /* FeedClientAdapterTests.swift */,
 			);
 			path = Adapter;
@@ -353,6 +355,7 @@
 		AA20233F2C5DE7550029F577 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				AA2023422C5E87E90029F577 /* FollowerClientAdapterSpy.swift */,
 				AA20233D2C5DE73C0029F577 /* FollowerClientAdapterTests.swift */,
 			);
 			path = Adapter;
@@ -510,10 +513,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */,
+				AA2023432C5E87EA0029F577 /* FollowerClientAdapterSpy.swift in Sources */,
 				AA20233E2C5DE73C0029F577 /* FollowerClientAdapterTests.swift in Sources */,
 				AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */,
 				AA20233B2C5DE2D00029F577 /* FeedClientAdapterTests.swift in Sources */,
-				AA2023362C5DDDAA0029F577 /* Sut.swift in Sources */,
+				AA2023412C5E87B00029F577 /* FeedClientAdapterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

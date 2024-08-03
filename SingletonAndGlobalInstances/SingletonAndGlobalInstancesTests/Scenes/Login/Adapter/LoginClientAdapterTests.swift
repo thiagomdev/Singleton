@@ -1,10 +1,3 @@
-//
-//  LoginClientAdapterTests.swift
-//  SingletonAndGlobalInstancesTests
-//
-//  Created by Thiago Monteiro on 02/08/24.
-//
-
 import XCTest
 @testable import SingletonAndGlobalInstances
 
@@ -21,9 +14,17 @@ final class LoginClientAdapterTests: XCTestCase {
             expectedDataObject = user
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 5.0)
+        wait(for: [expectation], timeout: 1.0)
         
         XCTAssertTrue(adapterSpy.executeCalled)
         XCTAssertNotNil(expectedDataObject)
+    }
+}
+
+extension LoginClientAdapterTests {
+    private func makeSut() -> (sut: LoginClientAdapter, adapterSpy: LoginClientAdapterSpy) {
+        let adapterSpy = LoginClientAdapterSpy()
+        let sut = LoginClientAdapter(api: adapterSpy)
+        return (sut, adapterSpy)
     }
 }

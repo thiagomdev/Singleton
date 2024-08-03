@@ -1,7 +1,7 @@
 import XCTest
 @testable import SingletonAndGlobalInstances
 
-final class LoginClientAdapterSpy: ApiClient {
+final class FollowerClientAdapterSpy: ApiClient {
     var urlRequest: URL?
     var expected: (Data)?
     

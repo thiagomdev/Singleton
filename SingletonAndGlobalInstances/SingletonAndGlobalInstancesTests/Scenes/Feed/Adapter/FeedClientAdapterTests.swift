@@ -1,15 +1,8 @@
-//
-//  FeedClientAdapterTests.swift
-//  SingletonAndGlobalInstancesTests
-//
-//  Created by Thiago Monteiro on 03/08/24.
-//
-
 import XCTest
 @testable import SingletonAndGlobalInstances
 
 final class FeedClientAdapterTests: XCTestCase {
-    func test_loadFeed() {
+    func test_load_feed() {
         let (sut, adapterSpy) = makeSut()
         let expectation = expectation(description: "Wait for a completion block!")
         var expectedDataObject: [FeedItem]?
@@ -21,25 +14,10 @@ final class FeedClientAdapterTests: XCTestCase {
             expectedDataObject = feed
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 5.0)
+        wait(for: [expectation], timeout: 1.0)
         
         XCTAssertTrue(adapterSpy.executeCalled)
         XCTAssertNotNil(expectedDataObject)
-    }
-}
-
-final class FeedClientAdapterSpy: ApiClient {
-    var urlRequest: URL?
-    var expected: (Data)?
-    
-    private(set) var executeCalled: Bool = false
-    
-    override func execute(request: URLRequest, completion: (Data) -> Void) {
-        executeCalled = true
-        urlRequest = request.url
-        if let expected {
-            completion(expected)
-        }
     }
 }
 
