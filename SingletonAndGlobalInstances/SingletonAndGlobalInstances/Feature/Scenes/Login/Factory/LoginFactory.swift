@@ -1,10 +1,3 @@
-//
-//  LoginFactory.swift
-//  SingletonAndGlobalInstances
-//
-//  Created by Thiago Monteiro on 03/08/24.
-//
-
 import UIKit
 
 enum LoginFactory {

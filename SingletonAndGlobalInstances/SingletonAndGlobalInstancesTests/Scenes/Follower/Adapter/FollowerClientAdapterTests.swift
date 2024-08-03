@@ -23,9 +23,18 @@ final class FollowerClientAdapterTests: XCTestCase {
 }
 
 extension FollowerClientAdapterTests {
-    private func makeSut() -> (sut: FollowerClientAdapter, adapterSpy: FollowerClientAdapterSpy) {
+    private func makeSut(
+        file: StaticString = #file,
+        line: UInt = #line) -> (
+            sut: FollowerClientAdapter,
+            adapterSpy: FollowerClientAdapterSpy) {
+                
         let adapterSpy = FollowerClientAdapterSpy()
         let sut = FollowerClientAdapter(api: adapterSpy)
+                
+        trackForMemoryLeaks(for: sut, file: file, line: line)
+        trackForMemoryLeaks(for: adapterSpy, file: file, line: line)
+                
         return (sut, adapterSpy)
     }
 }

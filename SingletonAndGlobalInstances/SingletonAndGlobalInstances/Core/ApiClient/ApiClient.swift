@@ -23,9 +23,9 @@ import Foundation
 /// ```
 
 class ApiClient {
-    var loginAdapter: LoginClientAdapter?
-    var feedAdapter: FeedClientAdapter?
-    var followerAdapter: FollowerClientAdapter?
+    private var loginAdapter: LoginClientAdapter?
+    private var feedAdapter: FeedClientAdapter?
+    private var followerAdapter: FollowerClientAdapter?
 
     init() { }
     

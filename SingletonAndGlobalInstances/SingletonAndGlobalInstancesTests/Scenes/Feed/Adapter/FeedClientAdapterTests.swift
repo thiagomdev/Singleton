@@ -12,6 +12,7 @@ final class FeedClientAdapterTests: XCTestCase {
             expectedDataObject = feed
             expectation.fulfill()
         }
+        
         wait(for: [expectation], timeout: 5.0)
         
         XCTAssertTrue(adapterSpy.loadFeedCalled)
@@ -21,9 +22,18 @@ final class FeedClientAdapterTests: XCTestCase {
 }
 
 extension FeedClientAdapterTests {
-    private func makeSut() -> (sut: FeedClientAdapter, adapterSpy: FeedClientAdapterSpy) {
+    private func makeSut(
+        file: StaticString = #file,
+        line: UInt = #line) -> (
+            sut: FeedClientAdapter,
+            adapterSpy: FeedClientAdapterSpy) {
+                
         let adapterSpy = FeedClientAdapterSpy()
         let sut = FeedClientAdapter(api: adapterSpy)
+                
+        trackForMemoryLeaks(for: sut, file: file, line: line)
+        trackForMemoryLeaks(for: adapterSpy, file: file, line: line)
+                
         return (sut, adapterSpy)
     }
 }

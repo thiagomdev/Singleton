@@ -29,6 +29,7 @@
 		AA2023412C5E87B00029F577 /* FeedClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023402C5E87AF0029F577 /* FeedClientAdapterSpy.swift */; };
 		AA2023432C5E87EA0029F577 /* FollowerClientAdapterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023422C5E87E90029F577 /* FollowerClientAdapterSpy.swift */; };
 		AA2023462C5EE0BD0029F577 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023452C5EE0B90029F577 /* LoginFactory.swift */; };
+		AA20234A2C5EF15F0029F577 /* XCTestCase+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023492C5EF1510029F577 /* XCTestCase+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		AA2023402C5E87AF0029F577 /* FeedClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapterSpy.swift; sourceTree = "<group>"; };
 		AA2023422C5E87E90029F577 /* FollowerClientAdapterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapterSpy.swift; sourceTree = "<group>"; };
 		AA2023452C5EE0B90029F577 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		AA2023492C5EF1510029F577 /* XCTestCase+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				AA20230A2C5B95600029F577 /* Start */,
+				AA2023472C5EEF8B0029F577 /* Core */,
 				AA20230B2C5B95790029F577 /* Feature */,
 				AA20230D2C5B95A10029F577 /* Resources */,
 			);
@@ -160,7 +163,6 @@
 		AA20230B2C5B95790029F577 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				AA2023092C5B95210029F577 /* ApiClient */,
 				AA2023262C5DD23E0029F577 /* Scenes */,
 			);
 			path = Feature;
@@ -300,6 +302,7 @@
 		AA20232F2C5DD4190029F577 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AA2023482C5EF1450029F577 /* Helpers */,
 				AA2023302C5DD4210029F577 /* Login */,
 				AA2023372C5DE2930029F577 /* Feed */,
 				AA20233C2C5DE6F20029F577 /* Follower */,
@@ -364,6 +367,22 @@
 				AA2023452C5EE0B90029F577 /* LoginFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		AA2023472C5EEF8B0029F577 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023092C5B95210029F577 /* ApiClient */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AA2023482C5EF1450029F577 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023492C5EF1510029F577 /* XCTestCase+.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2023322C5DD4530029F577 /* LoginClientAdapterTests.swift in Sources */,
+				AA20234A2C5EF15F0029F577 /* XCTestCase+.swift in Sources */,
 				AA2023432C5E87EA0029F577 /* FollowerClientAdapterSpy.swift in Sources */,
 				AA20233E2C5DE73C0029F577 /* FollowerClientAdapterTests.swift in Sources */,
 				AA2023342C5DDD840029F577 /* LoginClientAdapterSpy.swift in Sources */,
