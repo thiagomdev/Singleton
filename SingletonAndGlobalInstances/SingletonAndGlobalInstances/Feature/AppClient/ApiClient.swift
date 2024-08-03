@@ -21,12 +21,10 @@
 /// ```swift
 /// final class ApiClient {}
 /// ```
+import Foundation
 class ApiClient {
     static let shared: ApiClient = .init()
     
     private init() {}
-    
-    func login(completion: (LoggedInUser) -> Void) {}
-    func loadFeed(completion: ([FeedItem]) -> Void) {}
-    func loadFollower(completion: ([Follower]) -> Void) {}
+    func execute(_ : URLRequest, completion: (Data) -> Void) {}
 }

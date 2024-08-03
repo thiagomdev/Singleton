@@ -19,3 +19,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+extension ApiClient {
+    func login(completion: (LoggedInUser) -> Void) {}
+}
+

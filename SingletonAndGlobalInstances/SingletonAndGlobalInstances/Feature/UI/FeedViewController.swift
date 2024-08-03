@@ -18,3 +18,7 @@ class FeedViewController: UIViewController {
         }
     }
 }
+
+extension ApiClient {
+    func loadFeed(completion: ([FeedItem]) -> Void) {}
+}
