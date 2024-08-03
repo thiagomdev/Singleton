@@ -4,10 +4,15 @@
 //
 //  Created by Thiago Monteiro on 01/08/24.
 //
+import Foundation
 
 /// Singleton
 ///
-/// The point of Singleton is, you need to have just one instance to access your implementation. Inside of your Singleton you can create ``static let shared: AppClient = .init()`` to access any implementation. Remember you must create a ``private init() {} `` to guarantee just one Instance of this.
+/// The point of Singleton is,
+/// you need to have just one instance to access your implementation.
+/// Inside of your Singleton you can create ``static let shared: AppClient = .init()``
+/// to access any implementation. Remember you must create a ``private init() {} ``
+/// to guarantee just one Instance of this.
 ///
 ///
 /// ```swift
@@ -16,15 +21,20 @@
 ///      private init() {}
 ///  }
 ///  ```
-/// Verify that you are not using the key word final before the key word class. Because the final word won't allow you inherit the Singleton to do a Unit Test for exemplo.
+/// Verify that you are not using the key word final before the key word class.
+/// Because the final word won't allow you inherit the Singleton to do a Unit Test for exemplo.
 ///
 /// ```swift
 /// final class ApiClient {}
 /// ```
-import Foundation
+
 class ApiClient {
     static let shared: ApiClient = .init()
+    private var loginAdapter: LoginClientAdapter?
     
     private init() {}
-    func execute(_ : URLRequest, completion: (Data) -> Void) {}
+    
+    func execute(_ : URLRequest, completion: (Data) -> Void) {
+        // implementation
+    }
 }

@@ -22,6 +22,9 @@
 		AA2023142C5B9A780029F577 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023132C5B9A770029F577 /* FeedItem.swift */; };
 		AA2023162C5B9EE80029F577 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023152C5B9EE80029F577 /* FollowerViewController.swift */; };
 		AA2023182C5B9F220029F577 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2023172C5B9F1F0029F577 /* Follower.swift */; };
+		AA20231B2C5DD1410029F577 /* LoginClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231A2C5DD13F0029F577 /* LoginClientAdapter.swift */; };
+		AA20231D2C5DD16D0029F577 /* FeedClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231C2C5DD16C0029F577 /* FeedClientAdapter.swift */; };
+		AA20231F2C5DD1940029F577 /* FollowerClientAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		AA2023132C5B9A770029F577 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		AA2023152C5B9EE80029F577 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
 		AA2023172C5B9F1F0029F577 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		AA20231A2C5DD13F0029F577 /* LoginClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientAdapter.swift; sourceTree = "<group>"; };
+		AA20231C2C5DD16C0029F577 /* FeedClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClientAdapter.swift; sourceTree = "<group>"; };
+		AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerClientAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,21 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				AA2023092C5B95210029F577 /* AppClient */,
-				AA20230E2C5B96C40029F577 /* Domain */,
-				AA20230C2C5B95870029F577 /* UI */,
+				AA2023262C5DD23E0029F577 /* Scenes */,
 			);
 			path = Feature;
-			sourceTree = "<group>";
-		};
-		AA20230C2C5B95870029F577 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				AA2022DD2C5B87D90029F577 /* Main.storyboard */,
-				AA2022DB2C5B87D90029F577 /* LoginViewController.swift */,
-				AA2023112C5B9A2C0029F577 /* FeedViewController.swift */,
-				AA2023152C5B9EE80029F577 /* FollowerViewController.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		AA20230D2C5B95A10029F577 /* Resources */ = {
@@ -183,12 +177,115 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		AA20230E2C5B96C40029F577 /* Domain */ = {
+		AA2023202C5DD1F30029F577 /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023292C5DD2770029F577 /* Adapter */,
+				AA20232C2C5DD2C10029F577 /* Domain */,
+				AA2023252C5DD2260029F577 /* UI */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
+		AA2023212C5DD1F60029F577 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023282C5DD2660029F577 /* Adapter */,
+				AA20232B2C5DD2B50029F577 /* Domain */,
+				AA2023242C5DD21F0029F577 /* UI */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		AA2023222C5DD1F90029F577 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023272C5DD2570029F577 /* Adapter */,
+				AA20232A2C5DD2A80029F577 /* Domain */,
+				AA2023232C5DD2170029F577 /* UI */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AA2023232C5DD2170029F577 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA2022DD2C5B87D90029F577 /* Main.storyboard */,
+				AA2022DB2C5B87D90029F577 /* LoginViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AA2023242C5DD21F0029F577 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023112C5B9A2C0029F577 /* FeedViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AA2023252C5DD2260029F577 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023152C5B9EE80029F577 /* FollowerViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AA2023262C5DD23E0029F577 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023222C5DD1F90029F577 /* Login */,
+				AA2023212C5DD1F60029F577 /* Feed */,
+				AA2023202C5DD1F30029F577 /* Follower */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA2023272C5DD2570029F577 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				AA20231A2C5DD13F0029F577 /* LoginClientAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		AA2023282C5DD2660029F577 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				AA20231C2C5DD16C0029F577 /* FeedClientAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		AA2023292C5DD2770029F577 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				AA20231E2C5DD1930029F577 /* FollowerClientAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		AA20232A2C5DD2A80029F577 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AA20230F2C5B96C90029F577 /* LoggedInUser.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AA20232B2C5DD2B50029F577 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AA2023132C5B9A770029F577 /* FeedItem.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AA20232C2C5DD2C10029F577 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				AA2023172C5B9F1F0029F577 /* Follower.swift */,
-				AA2023132C5B9A770029F577 /* FeedItem.swift */,
-				AA20230F2C5B96C90029F577 /* LoggedInUser.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -324,12 +421,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA20231F2C5DD1940029F577 /* FollowerClientAdapter.swift in Sources */,
 				AA2023162C5B9EE80029F577 /* FollowerViewController.swift in Sources */,
 				AA2023182C5B9F220029F577 /* Follower.swift in Sources */,
+				AA20231B2C5DD1410029F577 /* LoginClientAdapter.swift in Sources */,
 				AA2022DC2C5B87D90029F577 /* LoginViewController.swift in Sources */,
 				AA2022D82C5B87D90029F577 /* AppDelegate.swift in Sources */,
 				AA2023082C5B89E70029F577 /* ApiClient.swift in Sources */,
 				AA2022DA2C5B87D90029F577 /* SceneDelegate.swift in Sources */,
+				AA20231D2C5DD16D0029F577 /* FeedClientAdapter.swift in Sources */,
 				AA2023122C5B9A2C0029F577 /* FeedViewController.swift in Sources */,
 				AA2023142C5B9A780029F577 /* FeedItem.swift in Sources */,
 				AA2023102C5B96D10029F577 /* LoggedInUser.swift in Sources */,
