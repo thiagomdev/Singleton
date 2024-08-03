@@ -11,7 +11,7 @@ final class FollowerClientAdapter {
 extension FollowerClientAdapter: FollowerClient {
     func loadFollower(completion: ([Follower]) -> Void) {
         api.execute(request: URLRequest(url: URL(string: "http://")!)) { _ in
-            completion(.init())
+            completion([.init()])
         }
     }
 }
